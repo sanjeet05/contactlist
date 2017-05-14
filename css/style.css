@@ -1,0 +1,50 @@
+body{
+	padding-top: 70px;
+	background: #eee;
+}
+.navbar{
+	-moz-box-shadow: rgba(0,0,0,0.09) 0 2px 0;
+	-webkit-box-shadow: rgba(0,0,0,0.09) 0 2px 0;
+	box-shadow: rgba(0,0,0,0.09) 0 2px 0;
+}
+.table tr>td.mymiddle{
+	vertical-align: middle;
+}
+.myimage{
+	border-radius: 50%;
+}
+.navbar .navbar-brand{
+	color: #dd5638;
+	font-weight: bold;
+	letter-spacing: -1px;
+	font-size: 20px;
+}
+
+.media{
+	padding: 10px 0;
+	margin-left: 20px;
+}
+.media-left{
+	padding: 0 20px;
+}
+.media-heading{
+	color: #dd5638;
+	margin-bottom: 10px;
+}
+.media-body{
+	padding-top: 15px;
+}
+
+.navbar-right{
+	margin-right: 0;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}

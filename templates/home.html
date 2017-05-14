@@ -1,0 +1,64 @@
+<section ng-init="homeCtrlInit()">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="list-group">
+                <button class="list-group-item active" ng-click="contactFilter= '' ">All Contact <span class="badge"> {{totalCount}} </span>  </button>
+                <button class="list-group-item" ng-click="contactFilter={group:'family'} ">Family <span class="badge"> {{familyCount}} </span> </button>
+                <button class="list-group-item" ng-click="contactFilter={group:'friends'} ">Friends <span class="badge"> {{friendsCount}} </span> </button>
+                <button class="list-group-item" ng-click="contactFilter={group:'others'} ">Others <span class="badge"> {{othersCount}} </span> </button>
+            </div>
+        </div>
+        <!-- /.col-md-3 -->
+        <div class="col-md-9">
+
+            <div class="panel panel-default">
+                <table class="table">
+                    <tr ng-repeat="contact in contactList | filter : contactFilter ">
+                        <td>
+                            <div class="media">
+                                <div class="media-body">
+                                    <h4 class="media-heading">Contact {{$index+1}}</h4>
+                                    <address>
+                                      <strong>{{contact.name}}</strong><br>
+                                      {{contact.email}}
+                                    </address>
+                                    <span style="display:none">{{contact.group}}</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td width="100px" class="mymiddle">
+                            <button class="btn btn-circle btn-default btn-xs" title="Edit" ng-click="editContact($index)">
+                                <i class="glyphicon glyphicon-edit"></i>
+                            </button>
+                            <button class="btn btn-circle btn-danger btn-xs" title="Remove" ng-click="deleteContact($index)">
+                                <i class="glyphicon glyphicon-remove"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="text-center">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
